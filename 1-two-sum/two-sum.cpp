@@ -6,7 +6,8 @@ public:
         for(i=0;i<nums.size();i++){
             for( j=i+1;j<nums.size();j++){
                 if(nums[i] + nums[j] == target){
-                    nums.clear();
+                    nums.clear();      //what basically this statement did is it will use the same nums array o(1) space complexity it will delete the older values from the array ..
+                    
                     nums.push_back(i);
                     nums.push_back(j);
                 }
