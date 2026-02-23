@@ -1,20 +1,27 @@
 class Solution {
  public:
-  bool isAnagram(string s, string t) {
-    if (s.length() != t.length())
-      return false;
-
-    vector<int> count(26);
-
-    for (const char c : s)
-      ++count[c - 'a'];
-
-    for (const char c : t) {
-      if (count[c - 'a'] == 0)
+  bool isAnagram(string s, string t) 
+   {
+        if(s.length()!=t.length())
         return false;
-      --count[c - 'a'];
-    }
+        
+        vector<int>freq(26 , 0);
+
+        for(char c : s)
+        freq[c - 'a']++;
+
+        
+        for(char c : t)
+        freq[c - 'a']--;
+
+        for(int i=0 ; i<=25 ; i++){
+            if(freq[i]!=0){
+                return false;
+            }
+        }
 
     return true;
-  }
+    }
+   
+    
 };
