@@ -18,3 +18,5 @@ public:
         return len;
     }
 };
+
+// This approach is also called sliding window approach In this approach We consider two variables first and second which are initially pointing to the zero of the given string Then remaining first on zero we start moving second Till we get the unique character Once we get the repeating character We delete the character which we get previously And make it count 0 in the count table and repeate the process .
